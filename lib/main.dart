@@ -1,31 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:layout_dasar/layout.dart';
 
-class LayoutD extends StatelessWidget {
-  const LayoutD({Key? key}) : super(key: key);
+void main() => runApp(MyApp());
 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-          body: Row(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Icon(Icons.account_circle),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Flutter Mcflutter',
-                style: Theme.of(context).textTheme.headline5,
-              ),
-              Text('Experienced App Developer'),
-            ],
-          ),
-        ],
-      )),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Material App',
+      home: LayoutD(),
     );
   }
 }
